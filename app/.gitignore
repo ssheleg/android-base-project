@@ -1,0 +1,10 @@
+*.iml
+*.apk
+*.bat
+local.properties
+gradle.properties
+gradlew
+.gradle
+.idea
+.DS_Store
+build

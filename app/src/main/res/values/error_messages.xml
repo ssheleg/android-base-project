@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_lost_connection">Please, check your connection</string>
+    <string name="error_not_found">Not found</string>
+    <string name="error_some_happened">Something goes wrong!</string>
+</resources>
