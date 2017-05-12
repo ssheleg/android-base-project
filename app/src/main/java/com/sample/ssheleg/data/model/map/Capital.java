@@ -1,8 +1,5 @@
 package com.sample.ssheleg.data.model.map;
 
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.gson.JsonArray;
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
@@ -110,11 +107,4 @@ public class Capital implements BaseMapModel {
         return result;
     }
 
-    @Override
-    public MarkerOptions buildMarker() {
-        return new MarkerOptions()
-                .title(country)
-                .position(new LatLng(latitude, longitude))
-                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.castle_pin));
-    }
 }

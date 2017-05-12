@@ -8,7 +8,6 @@ import com.sample.ssheleg.SampleApplication;
 import com.sample.ssheleg.data.database.HelperFactory;
 import com.sample.ssheleg.data.rest.ApiService;
 import com.sample.ssheleg.data.rest.factory.RetrofitApiFactory;
-import com.sample.ssheleg.utils.bus.UIBus;
 
 import javax.inject.Singleton;
 
@@ -38,12 +37,6 @@ public class AppModule {
     @Provides
     Context provideContext() {
         return application.getApplicationContext();
-    }
-
-    @Provides
-    @Singleton
-    UIBus provideUIBus() {
-        return new UIBus();
     }
 
     @Provides

@@ -1,3 +1,4 @@
+
 repositories {
     maven {
         url 'http://dl.bintray.com/jayrambhia/maven'
@@ -25,19 +26,26 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
-        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.android.tools.build:gradle:2.3.1'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.3'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
     }
 }
 
 allprojects {
     repositories {
         mavenCentral()
-        maven { url "https://jitpack.io" }
-        maven { url "https://dl.bintray.com/drummer-aidan/maven" }
         jcenter()
+        maven {
+            url 'http://dl.bintray.com/jayrambhia/maven'
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        maven {
+            url "https://dl.bintray.com/drummer-aidan/maven"
+        }
     }
 }
 

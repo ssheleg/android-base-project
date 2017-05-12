@@ -4,7 +4,6 @@ import android.support.multidex.MultiDexApplication;
 import android.support.v7.app.AppCompatDelegate;
 
 import com.sample.ssheleg.data.database.HelperFactory;
-import com.sample.ssheleg.utils.bus.UIBus;
 import com.sample.ssheleg.utils.dagger2.component.AppComponent;
 import com.sample.ssheleg.utils.dagger2.component.DaggerAppComponent;
 import com.sample.ssheleg.utils.dagger2.module.AppModule;
@@ -25,9 +24,6 @@ public class SampleApplication extends MultiDexApplication {
     @Inject
     HelperFactory helperFactory;
 
-    @Inject
-    UIBus uiBus;
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -43,10 +39,6 @@ public class SampleApplication extends MultiDexApplication {
 
     public static AppComponent getComponent() {
         return component;
-    }
-
-    public UIBus provideUIBus() {
-        return uiBus;
     }
 
     private AppComponent buildComponent() {
